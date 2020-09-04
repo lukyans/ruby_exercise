@@ -1,6 +1,3 @@
-require 'pry'
-require_relative "user"
-
 module Collection
   def self.array_collection
     [

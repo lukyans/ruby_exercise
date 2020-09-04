@@ -2,7 +2,6 @@
 
 ### Versions
 
-Rails 6.0.3
 Ruby 2.7.0
 
 ### Setup

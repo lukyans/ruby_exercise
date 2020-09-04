@@ -1,4 +1,3 @@
-require 'pry'
 class User
   attr_accessor :id, :name, :age
 
@@ -11,6 +10,7 @@ class User
   def self.where(hash)
     result = []
     @error = "No result"
+
     collection.each do |obj|
       attr = obj.instance_variables.map {|s| s[1..-1]}
       result << obj if obj.id == hash.values.first && find_by_key(hash, attr[0])
@@ -25,6 +25,7 @@ class User
       @error = "Error: #{hash.keys.first.to_s} is not valid."
       return false
     end
+    return true
   end
 
   def self.collection

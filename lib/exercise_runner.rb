@@ -1,6 +1,5 @@
-require 'pry'
-require_relative 'user'
 require_relative 'collection'
+require_relative 'user'
 
 class ExerciseRunner
   include Collection
@@ -15,4 +14,4 @@ class ExerciseRunner
 end
 
 runner = ExerciseRunner.new
-p runner.start(User.new(age: 20))
+p runner.start(User.where(age: 20))
